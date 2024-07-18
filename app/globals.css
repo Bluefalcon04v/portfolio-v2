@@ -79,66 +79,67 @@ html{
 /* +++++++++++++++++++++++++++++++++++ CUBE +++++++++++++++++++++++++++++++++++++++++++ */
 /* @keyframes turn {
   from { transform: rotate3d(0, 0, 0, 0); }
-  to { transform: rotate3d(1, 1, 0, 360deg); }
+  to { transform: rotate3d(1, 1, 0, 720deg); }
 } */
 
 .container {
-  width: 200px;
-  height: 200px;
-  perspective: 500px;
-  margin: 100px;
+  width: 60px; /* Decreased width */
+  height: 60px; /* Decreased height */
+  perspective: 200px; /* Adjusted perspective */
+  /* margin: 20px; Reduced margin */
 }
 
 .cube {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 60px; /* Adjusted cube width */
+  height: 60px; /* Adjusted cube height */
   transform-style: preserve-3d;
-  animation: turn 5s linear infinite;
+  animation: turn 4s ease-in-out infinite;
 }
 
 .face {
-  width: 200px;
-  height: 200px;
-  background: skyblue;
+  width: 60px; /* Adjusted face width */
+  height: 60px; /* Adjusted face height */
+  background: #FC1736;
+
   border: 2px solid black;
   position: absolute;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1rem; /* Adjusted font size */
+  rotate: 12 14 1 20deg;  
   transition: transform 500ms;
 }
 
 .front {
-  transform: translateZ(100px);
+  transform: translateZ(30px); /* Adjusted translation */
 }
 
 .back {
-  transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-30px) rotateY(180deg); /* Adjusted translation and rotation */
 }
 
 .left {
-  transform: translateX(-100px) rotateY(-90deg);
+  transform: translateX(-30px) rotateY(-90deg); /* Adjusted translation and rotation */
 }
 
 .right {
-  transform: translateX(100px) rotateY(90deg);
+  transform: translateX(30px) rotateY(90deg); /* Adjusted translation and rotation */
 }
 
 .top {
-  transform: translateY(-100px) rotateX(90deg);
+  transform: translateY(-30px) rotateX(90deg); /* Adjusted translation and rotation */
 }
 
 .bottom {
-  transform: translateY(100px) rotateX(-90deg);
+  transform: translateY(30px) rotateX(-90deg); /* Adjusted translation and rotation */
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cube {
     animation: none;
-    transform: rotate3d(1, 1, 0, 45deg);
+    transform: rotate3d(1, 1, 0, 45deg); /* Adjusted reduced motion effect */
   }
 }
