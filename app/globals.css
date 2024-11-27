@@ -39,7 +39,6 @@
   width: 60px; 
   height: 60px;
   background: #FC1736;
-
   border: 2px solid black;
   position: absolute;
   /* opacity: 0.5; */
@@ -80,4 +79,37 @@
     animation: none;
     transform: rotate3d(1, 1, 0, 45deg); 
   }
+}
+
+
+/* ----------------------------- Ink Loading Animation --------------------------- */
+body{
+  background-color: black;
+  color: white;
+}
+
+#ink-loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+#ink-loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/Images/bg-img1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  -webkit-mask-image: url('/ink.gif'); 
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url('/ink.gif');
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
 }
