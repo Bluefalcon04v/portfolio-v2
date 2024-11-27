@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +21,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </head>
-      <body className={"w-[88%] mx-auto "}>
+      <body className="w-full bg-background">
         <NavBar />
+        <div className="mx-auto w-[94%] relative pt-16">
         {children}
+        </div>
       </body>
     </html>
   );
