@@ -18,27 +18,27 @@
 /* ----------------------------- Ink Loading Animation --------------------------- */
 
 /* #ink-loading{
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  display: flex;
 } */
 
 #ink-loading::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   background-image: url('/Images/bg-img1.jpg'); 
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
   -webkit-mask-image: url('/ink.gif'); 
-  -webkit-mask-position: center;
-  -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
   mask-image: url('/ink.gif');
-  mask-position: center;
-  mask-size: cover;
+  background-position: center;
+  -webkit-mask-size: cover;
   mask-repeat: no-repeat;
+  background-size: cover;
+  mask-position: center;
+  position: absolute;
+  mask-size: cover;
+  content: "";
+  z-index: -1;
+  inset: 0;
 }
